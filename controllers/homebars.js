@@ -4,10 +4,15 @@ module.exports = {
 
   index: (req, res) => {
     knex('homebars')
-    .then(results => {
-      res.json(results)
+    .then(results=> {
+      res.send(results)
+    })
+    .catch((error)=>{
+      console.log(error);
+      res.sendStatus(400);
     })
   },
+
   test :(req,res)=>{
     res.sendStatus(200);
   },
