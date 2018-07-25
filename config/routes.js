@@ -4,6 +4,7 @@ const comments = require('../controllers/comments')
 const owners = require('../controllers/owners')
 
 module.exports = function (app){
+  app.get('/', homebars.test)
 
   app.get('/bars', homebars.index)
 

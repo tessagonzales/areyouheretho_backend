@@ -8,6 +8,9 @@ module.exports = {
       res.json(results)
     })
   },
+  test :(req,res)=>{
+    res.sendStatus(200);
+  },
 
   patching: (req, res) => {
     console.log('req.body', req.body);
